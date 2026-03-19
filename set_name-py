@@ -1,0 +1,22 @@
+import pickle
+import sys
+
+if len(sys.argv) != 3:
+    print("Usage: python3 set_name.py <visitor_id> 'Name'")
+    print("Example: python3 set_name.py Visitor_001 'Malak'")
+    sys.exit(1)
+
+visitor_id = sys.argv[1]
+name = sys.argv[2]
+
+with open('visitor_database.pkl', 'rb') as f:
+    visitors = pickle.load(f)
+
+if visitor_id in visitors:
+    visitors[visitor_id]['name'] = name
+    with open('visitor_database.pkl', 'wb') as f:
+        pickle.dump(visitors, f)
+    print(f"✅ Set {visitor_id} name to: {name}")
+else:
+    print(f"❌ {visitor_id} not found")
+    print(f"Available: {list(visitors.keys())}")

@@ -1,0 +1,15 @@
+"""
+OpenAI Configuration
+Store your API key here (DO NOT commit to Git!)
+"""
+
+# Replace this with your actual API key
+OPENAI_API_KEY = "sk-your-api-key-here"
+
+# Or set as environment variable:
+# export OPENAI_API_KEY="sk-your-key-here"
+
+import os
+if not OPENAI_API_KEY or OPENAI_API_KEY == "":
+    # Try to get from environment
+    OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')

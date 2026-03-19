@@ -1,0 +1,1070 @@
+[2026-02-03 13:15:35] [INFO] System started
+[2026-02-03 13:18:40] [INFO] System shutdown
+[2026-02-03 13:30:24] [INFO] System started
+[2026-02-03 13:33:29] [INFO] State changed to: LISTENING
+[2026-02-03 13:33:32] [INFO] State changed to: THINKING
+[2026-02-03 13:33:33] [INFO] State changed to: ERROR
+[2026-02-03 13:33:44] [INFO] System shutdown
+[2026-02-03 13:36:32] [INFO] System started
+[2026-02-03 13:39:41] [INFO] System started
+[2026-02-03 13:40:45] [INFO] System started
+[2026-02-03 13:40:48] [INFO] State changed to: GREETING
+[2026-02-03 13:40:56] [INFO] State changed to: THINKING
+[2026-02-03 13:40:59] [INFO] State changed to: HELPING
+[2026-02-03 13:41:04] [INFO] State changed to: BUSY
+[2026-02-03 13:41:07] [INFO] State changed to: SURPRISED
+[2026-02-03 13:41:10] [INFO] State changed to: ANGRY
+[2026-02-03 13:41:13] [INFO] State changed to: FAREWELL
+[2026-02-03 13:41:16] [INFO] State changed to: IDLE
+[2026-02-03 13:41:34] [INFO] State changed to: GREETING
+[2026-02-03 13:41:38] [INFO] State changed to: LISTENING
+[2026-02-03 13:41:41] [INFO] State changed to: HELPING
+[2026-02-03 13:41:45] [INFO] State changed to: ERROR
+[2026-02-03 13:41:45] [INFO] State changed to: ERROR
+[2026-02-03 13:41:49] [INFO] State changed to: SURPRISED
+[2026-02-03 13:41:56] [INFO] State changed to: ANGRY
+[2026-02-03 13:43:55] [INFO] System shutdown
+[2026-02-03 13:44:39] [INFO] System started
+[2026-02-03 13:44:42] [INFO] State changed to: ANGRY
+[2026-02-03 13:44:51] [INFO] State changed to: ANGRY
+[2026-02-03 13:44:54] [INFO] State changed to: GREETING
+[2026-02-03 13:45:14] [INFO] System shutdown
+[2026-02-03 13:48:47] [INFO] System started
+[2026-02-03 13:48:50] [INFO] State changed to: GREETING
+[2026-02-03 13:48:57] [INFO] State changed to: LISTENING
+[2026-02-03 13:48:57] [INFO] State changed to: THINKING
+[2026-02-03 13:48:58] [INFO] State changed to: HELPING
+[2026-02-03 13:48:59] [INFO] State changed to: ERROR
+[2026-02-03 13:49:08] [INFO] System shutdown
+[2026-02-03 17:20:25] [INFO] System started
+[2026-02-03 17:20:33] [INFO] State changed to: GREETING
+[2026-02-03 17:20:38] [INFO] State changed to: GREETING
+[2026-02-03 17:20:44] [INFO] State changed to: GREETING
+[2026-02-03 17:20:49] [INFO] State changed to: GREETING
+[2026-02-03 17:21:04] [INFO] State changed to: LISTENING
+[2026-02-03 17:21:06] [INFO] State changed to: GREETING
+[2026-02-03 17:21:11] [INFO] State changed to: GREETING
+[2026-02-03 17:21:14] [INFO] State changed to: LISTENING
+[2026-02-03 17:21:16] [INFO] State changed to: THINKING
+[2026-02-03 17:21:16] [INFO] State changed to: GREETING
+[2026-02-03 17:21:20] [INFO] State changed to: THINKING
+[2026-02-03 17:21:22] [INFO] State changed to: GREETING
+[2026-02-03 17:21:27] [INFO] System shutdown
+[2026-02-03 17:21:30] [INFO] System started
+[2026-02-03 17:21:30] [INFO] State changed to: GREETING
+[2026-02-03 17:22:05] [INFO] State changed to: GREETING
+[2026-02-03 17:22:10] [INFO] State changed to: GREETING
+[2026-02-03 17:22:24] [INFO] State changed to: GREETING
+[2026-02-03 17:22:35] [INFO] State changed to: GREETING
+[2026-02-03 17:22:40] [INFO] State changed to: GREETING
+[2026-02-03 17:22:48] [INFO] State changed to: THINKING
+[2026-02-03 17:22:51] [INFO] State changed to: HELPING
+[2026-02-03 17:22:54] [INFO] State changed to: ERROR
+[2026-02-03 17:22:56] [INFO] State changed to: BUSY
+[2026-02-03 17:22:59] [INFO] State changed to: SURPRISED
+[2026-02-03 17:23:02] [INFO] State changed to: ANGRY
+[2026-02-03 17:23:06] [INFO] State changed to: FAREWELL
+[2026-02-03 17:24:00] [INFO] System shutdown
+[2026-02-03 17:29:40] [INFO] System started
+[2026-02-03 17:29:45] [INFO] State changed to: GREETING
+[2026-02-03 17:30:01] [INFO] State changed to: GREETING
+[2026-02-03 17:30:10] [INFO] State changed to: LISTENING
+[2026-02-03 17:30:19] [INFO] State changed to: GREETING
+[2026-02-03 17:30:24] [INFO] State changed to: ANGRY
+[2026-02-03 17:30:31] [INFO] System shutdown
+[2026-02-03 18:36:35] [INFO] System started
+[2026-02-03 18:36:54] [INFO] State changed to: GREETING
+[2026-02-03 18:38:10] [INFO] System shutdown
+[2026-02-03 21:53:35] [INFO] System started
+[2026-02-03 21:53:42] [INFO] State changed to: GREETING
+[2026-02-03 21:53:53] [INFO] System shutdown
+[2026-02-03 21:53:55] [INFO] System started
+[2026-02-03 21:54:36] [INFO] State changed to: BUSY
+[2026-02-03 21:54:45] [INFO] State changed to: ANGRY
+[2026-02-03 21:55:01] [INFO] State changed to: FAREWELL
+[2026-02-03 21:55:04] [INFO] State changed to: IDLE
+[2026-02-03 21:55:07] [INFO] State changed to: IDLE
+[2026-02-03 21:55:43] [INFO] System shutdown
+[2026-02-03 21:56:17] [INFO] System started
+[2026-02-03 21:56:27] [INFO] State changed to: GREETING
+[2026-02-03 21:56:38] [INFO] State changed to: LISTENING
+[2026-02-03 21:56:42] [INFO] State changed to: THINKING
+[2026-02-03 21:56:49] [INFO] State changed to: HELPING
+[2026-02-03 21:56:57] [INFO] State changed to: ERROR
+[2026-02-03 21:57:11] [INFO] State changed to: SURPRISED
+[2026-02-03 21:57:15] [INFO] State changed to: ANGRY
+[2026-02-03 21:57:27] [INFO] State changed to: FAREWELL
+[2026-02-03 21:57:33] [INFO] State changed to: IDLE
+[2026-02-03 21:58:03] [INFO] System shutdown
+[2026-02-03 22:00:56] [INFO] System started
+[2026-02-03 22:01:29] [INFO] System shutdown
+[2026-02-03 22:06:27] [INFO] System started
+[2026-02-03 22:06:31] [INFO] State changed to: IDLE
+[2026-02-03 22:06:39] [INFO] State changed to: LISTENING
+[2026-02-03 22:07:19] [INFO] System shutdown
+[2026-02-03 22:08:08] [INFO] System started
+[2026-02-03 22:08:12] [INFO] System shutdown
+[2026-02-04 09:40:08] [INFO] System started
+[2026-02-04 09:40:16] [INFO] State changed to: GREETING
+[2026-02-04 09:40:27] [INFO] System shutdown
+[2026-02-04 09:40:33] [INFO] System started
+[2026-02-04 09:40:49] [INFO] State changed to: GREETING
+[2026-02-04 09:40:49] [INFO] State changed to: ERROR
+[2026-02-04 09:40:52] [INFO] State changed to: ERROR
+[2026-02-04 09:40:56] [INFO] State changed to: THINKING
+[2026-02-04 09:41:00] [INFO] State changed to: GREETING
+[2026-02-04 09:41:02] [INFO] System shutdown
+[2026-02-04 12:41:00] [INFO] System started
+[2026-02-04 12:41:01] [INFO] State changed to: GREETING
+[2026-02-04 12:41:09] [INFO] State changed to: IDLE
+[2026-02-04 12:41:15] [INFO] State changed to: GREETING
+[2026-02-04 12:42:25] [INFO] State changed to: LISTENING
+[2026-02-04 12:42:31] [INFO] System shutdown
+[2026-02-04 12:42:39] [INFO] System started
+[2026-02-04 12:42:57] [INFO] System shutdown
+[2026-02-04 12:43:08] [INFO] System started
+[2026-02-04 12:50:02] [INFO] System shutdown
+[2026-02-04 12:53:22] [INFO] System started
+[2026-02-04 12:53:28] [INFO] System shutdown
+[2026-02-04 13:04:32] [INFO] System started
+[2026-02-04 13:04:42] [INFO] State changed to: GREETING
+[2026-02-04 13:05:15] [INFO] State changed to: ERROR
+[2026-02-04 13:05:27] [INFO] State changed to: BUSY
+[2026-02-04 13:05:32] [INFO] State changed to: SURPRISED
+[2026-02-04 13:05:37] [INFO] State changed to: ANGRY
+[2026-02-04 13:05:44] [INFO] State changed to: FAREWELL
+[2026-02-04 13:05:48] [INFO] State changed to: IDLE
+[2026-02-04 13:06:00] [INFO] System shutdown
+[2026-02-04 14:24:58] [INFO] System started
+[2026-02-04 14:27:11] [INFO] System shutdown
+[2026-02-05 16:30:34] [INFO] System started
+[2026-02-05 16:31:09] [INFO] System shutdown
+[2026-02-05 16:31:18] [INFO] System started
+[2026-02-05 16:31:19] [INFO] State changed to: GREETING
+[2026-02-05 16:31:23] [INFO] State changed to: ERROR
+[2026-02-05 16:31:36] [INFO] State changed to: GREETING
+[2026-02-05 16:32:13] [INFO] State changed to: GREETING
+[2026-02-05 16:32:25] [INFO] State changed to: GREETING
+[2026-02-05 16:32:36] [INFO] State changed to: SURPRISED
+[2026-02-05 16:32:46] [INFO] State changed to: GREETING
+[2026-02-05 16:32:56] [INFO] System shutdown
+[2026-02-05 16:32:58] [INFO] System started
+[2026-02-05 16:32:58] [INFO] State changed to: GREETING
+[2026-02-05 16:33:06] [INFO] State changed to: ANGRY
+[2026-02-05 16:33:11] [INFO] State changed to: GREETING
+[2026-02-05 16:33:49] [INFO] System shutdown
+[2026-02-05 17:39:42] [INFO] System started
+[2026-02-05 17:39:50] [INFO] State changed to: GREETING
+[2026-02-05 17:40:06] [INFO] State changed to: GREETING
+[2026-02-05 17:46:39] [INFO] System shutdown
+[2026-02-05 18:48:03] [INFO] System started
+[2026-02-05 18:48:09] [INFO] State changed to: GREETING
+[2026-02-05 18:48:15] [INFO] State changed to: LISTENING
+[2026-02-05 18:48:20] [INFO] State changed to: THINKING
+[2026-02-05 18:48:23] [INFO] State changed to: HELPING
+[2026-02-05 18:48:26] [INFO] State changed to: ERROR
+[2026-02-05 18:48:32] [INFO] State changed to: GREETING
+[2026-02-05 18:48:59] [INFO] System shutdown
+[2026-02-06 09:28:59] [INFO] System started
+[2026-02-06 09:29:04] [INFO] System shutdown
+[2026-02-06 09:46:17] [INFO] System started
+[2026-02-06 10:02:30] [INFO] System shutdown
+[2026-02-06 10:02:33] [INFO] System started
+[2026-02-06 10:02:35] [INFO] System shutdown
+[2026-02-06 10:53:01] [INFO] System started
+[2026-02-06 11:12:57] [INFO] System shutdown
+[2026-02-06 12:13:28] [INFO] System started
+[2026-02-06 12:13:37] [INFO] System shutdown
+[2026-02-06 12:30:24] [INFO] System started
+[2026-02-06 12:30:28] [INFO] System shutdown
+[2026-02-06 20:12:21] [INFO] System started
+[2026-02-06 20:16:04] [INFO] System started
+[2026-02-06 20:16:05] [INFO] State changed to: GREETING
+[2026-02-06 20:16:47] [INFO] System shutdown
+[2026-02-06 20:16:52] [INFO] System started
+[2026-02-06 20:16:53] [INFO] State changed to: GREETING
+[2026-02-06 20:17:12] [INFO] System shutdown
+[2026-02-06 20:41:57] [INFO] System started
+[2026-02-06 20:41:58] [INFO] State changed to: GREETING
+[2026-02-06 20:42:57] [INFO] System shutdown
+[2026-02-06 20:55:34] [INFO] System started
+[2026-02-06 20:56:37] [INFO] System shutdown
+[2026-02-06 21:02:53] [INFO] System started
+[2026-02-06 21:02:58] [INFO] State changed to: HELPING
+[2026-02-06 21:03:24] [INFO] System shutdown
+[2026-02-06 21:11:03] [INFO] System started
+[2026-02-06 21:11:23] [INFO] System shutdown
+[2026-02-06 21:21:27] [INFO] System started
+[2026-02-06 21:21:39] [INFO] State changed to: HELPING
+[2026-02-06 21:21:42] [INFO] State changed to: HELPING
+[2026-02-06 21:21:49] [INFO] System shutdown
+[2026-02-06 21:43:28] [INFO] System started
+[2026-02-06 21:43:32] [INFO] State changed to: GREETING
+[2026-02-06 21:43:44] [INFO] System shutdown
+[2026-02-06 21:50:02] [INFO] System started
+[2026-02-06 21:50:13] [INFO] State changed to: HELPING
+[2026-02-06 21:50:20] [INFO] State changed to: GREETING
+[2026-02-06 21:50:29] [INFO] System shutdown
+[2026-02-06 21:59:17] [INFO] System started
+[2026-02-06 21:59:22] [INFO] State changed to: GREETING
+[2026-02-06 21:59:26] [INFO] State changed to: HELPING
+[2026-02-06 21:59:43] [INFO] System shutdown
+[2026-02-06 22:04:32] [INFO] System started
+[2026-02-06 22:07:12] [INFO] System shutdown
+[2026-02-06 22:27:08] [INFO] System started
+[2026-02-06 22:27:40] [INFO] System shutdown
+[2026-02-08 10:52:37] [INFO] System started
+[2026-02-08 10:52:55] [INFO] System shutdown
+[2026-02-08 10:56:41] [INFO] System started
+[2026-02-08 10:56:53] [INFO] System shutdown
+[2026-02-08 11:56:20] [INFO] System started
+[2026-02-08 11:56:55] [INFO] System shutdown
+[2026-02-08 12:02:44] [INFO] System started
+[2026-02-08 12:11:01] [INFO] System started
+[2026-02-08 12:11:17] [INFO] State changed to: GREETING
+[2026-02-08 12:11:29] [INFO] System shutdown
+[2026-02-08 12:11:51] [INFO] System started
+[2026-02-08 12:12:38] [INFO] State changed to: GREETING
+[2026-02-08 12:13:13] [INFO] System shutdown
+[2026-02-08 12:27:08] [INFO] System started
+[2026-02-08 12:27:24] [INFO] State changed to: GREETING
+[2026-02-08 12:27:51] [INFO] System shutdown
+[2026-02-08 12:29:40] [INFO] System started
+[2026-02-08 12:30:05] [INFO] System shutdown
+[2026-02-08 12:33:05] [INFO] System started
+[2026-02-08 12:33:20] [INFO] State changed to: GREETING
+[2026-02-08 12:33:41] [INFO] System shutdown
+[2026-02-08 12:38:54] [INFO] System started
+[2026-02-08 12:39:24] [INFO] State changed to: GREETING
+[2026-02-08 12:40:23] [INFO] System shutdown
+[2026-02-08 12:40:28] [INFO] System started
+[2026-02-08 12:41:08] [INFO] System shutdown
+[2026-02-08 13:10:30] [INFO] System started
+[2026-02-08 13:11:28] [INFO] System started
+[2026-02-08 13:12:11] [INFO] System shutdown
+[2026-02-08 13:47:11] [INFO] System started
+[2026-02-08 13:47:35] [INFO] System shutdown
+[2026-02-08 13:47:44] [INFO] System started
+[2026-02-08 13:48:08] [INFO] System shutdown
+[2026-02-08 13:48:16] [INFO] System started
+[2026-02-08 13:48:54] [INFO] System shutdown
+[2026-02-08 13:49:04] [INFO] System started
+[2026-02-08 13:49:27] [INFO] System shutdown
+[2026-02-08 13:50:07] [INFO] System started
+[2026-02-08 13:51:46] [INFO] System shutdown
+[2026-02-08 14:36:16] [INFO] System started
+[2026-02-08 14:37:08] [INFO] System shutdown
+[2026-02-08 14:37:28] [INFO] System started
+[2026-02-08 14:38:19] [INFO] System shutdown
+[2026-02-08 14:38:30] [INFO] System started
+[2026-02-08 14:39:21] [INFO] System shutdown
+[2026-02-08 14:39:35] [INFO] System started
+[2026-02-08 14:40:26] [INFO] State changed to: GREETING
+[2026-02-08 14:40:40] [INFO] System shutdown
+[2026-02-08 14:45:09] [INFO] System started
+[2026-02-08 14:46:07] [INFO] State changed to: LISTENING
+[2026-02-08 14:46:11] [INFO] State changed to: GREETING
+[2026-02-08 14:46:22] [INFO] State changed to: IDLE
+[2026-02-08 14:46:28] [INFO] System shutdown
+[2026-02-08 14:47:33] [INFO] System started
+[2026-02-08 14:47:46] [INFO] State changed to: GREETING
+[2026-02-08 14:48:27] [INFO] System shutdown
+[2026-02-08 14:52:46] [INFO] System started
+[2026-02-08 14:52:52] [INFO] State changed to: GREETING
+[2026-02-08 14:53:04] [INFO] State changed to: GREETING
+[2026-02-08 14:53:28] [INFO] System shutdown
+[2026-02-08 15:07:43] [INFO] System started
+[2026-02-08 15:08:18] [INFO] State changed to: GREETING
+[2026-02-08 15:08:25] [INFO] System shutdown
+[2026-02-08 15:13:19] [INFO] System started
+[2026-02-08 15:14:00] [INFO] System shutdown
+[2026-02-08 15:15:03] [INFO] System started
+[2026-02-08 15:15:29] [INFO] System shutdown
+[2026-02-08 15:33:08] [INFO] System started
+[2026-02-08 15:34:12] [INFO] System shutdown
+[2026-02-08 15:35:19] [INFO] System started
+[2026-02-08 15:35:37] [INFO] State changed to: GREETING
+[2026-02-08 15:35:55] [INFO] System shutdown
+[2026-02-08 15:38:03] [INFO] System started
+[2026-02-08 15:38:21] [INFO] State changed to: GREETING
+[2026-02-08 15:38:33] [INFO] System shutdown
+[2026-02-08 15:39:53] [INFO] System started
+[2026-02-08 15:40:31] [INFO] System shutdown
+[2026-02-08 15:40:38] [INFO] System started
+[2026-02-08 15:41:09] [INFO] State changed to: GREETING
+[2026-02-08 15:41:32] [INFO] System shutdown
+[2026-02-08 15:46:22] [INFO] System started
+[2026-02-08 15:46:38] [INFO] System shutdown
+[2026-02-08 15:46:46] [INFO] System started
+[2026-02-08 15:46:53] [INFO] System shutdown
+[2026-02-08 15:47:04] [INFO] System started
+[2026-02-08 15:47:25] [INFO] System shutdown
+[2026-02-08 15:47:33] [INFO] System started
+[2026-02-08 15:47:37] [INFO] System shutdown
+[2026-02-08 15:47:46] [INFO] System started
+[2026-02-08 15:48:10] [INFO] System shutdown
+[2026-02-08 15:48:16] [INFO] System started
+[2026-02-08 15:48:23] [INFO] System shutdown
+[2026-02-08 15:48:36] [INFO] System started
+[2026-02-08 15:48:57] [INFO] System shutdown
+[2026-02-08 15:59:46] [INFO] System started
+[2026-02-08 16:00:02] [INFO] System shutdown
+[2026-02-08 16:00:08] [INFO] System started
+[2026-02-08 16:00:17] [INFO] System shutdown
+[2026-02-08 16:01:03] [INFO] System started
+[2026-02-08 16:01:32] [INFO] System shutdown
+[2026-02-08 16:07:16] [INFO] System started
+[2026-02-08 16:07:24] [INFO] System shutdown
+[2026-02-08 16:07:35] [INFO] System started
+[2026-02-08 16:07:48] [INFO] System shutdown
+[2026-02-08 16:08:49] [INFO] System started
+[2026-02-08 16:09:10] [INFO] System shutdown
+[2026-02-08 16:09:23] [INFO] System started
+[2026-02-08 16:09:35] [INFO] System shutdown
+[2026-02-08 16:09:55] [INFO] System started
+[2026-02-08 16:10:10] [INFO] System shutdown
+[2026-02-08 16:10:17] [INFO] System started
+[2026-02-08 16:10:25] [INFO] System shutdown
+[2026-02-08 16:10:33] [INFO] System started
+[2026-02-08 16:11:04] [INFO] System shutdown
+[2026-02-08 16:11:11] [INFO] System started
+[2026-02-08 16:12:01] [INFO] System shutdown
+[2026-02-09 15:21:46] [INFO] System started
+[2026-02-09 15:21:51] [INFO] State changed to: GREETING
+[2026-02-09 15:22:04] [INFO] System shutdown
+[2026-02-09 15:22:10] [INFO] System started
+[2026-02-09 15:22:18] [INFO] System shutdown
+[2026-02-09 15:22:23] [INFO] System started
+[2026-02-09 15:22:33] [INFO] System shutdown
+[2026-02-09 15:25:52] [INFO] System started
+[2026-02-09 15:26:24] [INFO] System shutdown
+[2026-02-09 15:26:29] [INFO] System started
+[2026-02-09 15:26:55] [INFO] State changed to: LISTENING
+[2026-02-09 15:27:04] [INFO] State changed to: ERROR
+[2026-02-09 15:27:08] [INFO] System shutdown
+[2026-02-09 15:27:13] [INFO] System started
+[2026-02-09 15:27:25] [INFO] System shutdown
+[2026-02-09 15:44:26] [INFO] System started
+[2026-02-09 15:45:33] [INFO] System shutdown
+[2026-02-09 15:45:39] [INFO] System started
+[2026-02-09 15:46:07] [INFO] System shutdown
+[2026-02-09 15:51:43] [INFO] System started
+[2026-02-09 15:52:20] [INFO] System shutdown
+[2026-02-09 15:52:34] [INFO] System started
+[2026-02-09 15:52:53] [INFO] System shutdown
+[2026-02-09 15:53:00] [INFO] System started
+[2026-02-09 15:53:25] [INFO] System shutdown
+[2026-02-09 16:04:21] [INFO] System started
+[2026-02-09 16:06:16] [INFO] System shutdown
+[2026-02-10 09:40:04] [INFO] System started
+[2026-02-10 09:40:40] [INFO] System shutdown
+[2026-02-10 09:56:18] [INFO] System started
+[2026-02-10 09:56:42] [INFO] System shutdown
+[2026-02-10 09:56:48] [INFO] System started
+[2026-02-10 09:56:58] [INFO] System shutdown
+[2026-02-10 09:57:45] [INFO] System started
+[2026-02-10 09:58:07] [INFO] System shutdown
+[2026-02-10 09:58:15] [INFO] System started
+[2026-02-10 09:58:59] [INFO] System shutdown
+[2026-02-10 10:01:16] [INFO] System started
+[2026-02-10 10:01:35] [INFO] System shutdown
+[2026-02-10 10:38:03] [INFO] System started
+[2026-02-10 10:39:01] [INFO] System shutdown
+[2026-02-10 10:39:07] [INFO] System started
+[2026-02-10 10:39:37] [INFO] System shutdown
+[2026-02-10 10:39:45] [INFO] System started
+[2026-02-10 10:40:04] [INFO] System shutdown
+[2026-02-10 10:40:10] [INFO] System started
+[2026-02-10 10:40:22] [INFO] System shutdown
+[2026-02-10 10:40:30] [INFO] System started
+[2026-02-10 10:40:40] [INFO] System shutdown
+[2026-02-10 10:40:44] [INFO] System started
+[2026-02-10 10:40:50] [INFO] System shutdown
+[2026-02-10 10:41:06] [INFO] System started
+[2026-02-10 10:41:29] [INFO] System shutdown
+[2026-02-10 10:56:38] [INFO] System started
+[2026-02-10 10:56:41] [INFO] System shutdown
+[2026-02-10 11:02:34] [INFO] System started
+[2026-02-10 11:02:42] [INFO] System shutdown
+[2026-02-10 11:03:20] [INFO] System started
+[2026-02-10 11:03:30] [INFO] System shutdown
+[2026-02-10 11:04:59] [INFO] System started
+[2026-02-10 11:05:16] [INFO] System shutdown
+[2026-02-10 11:05:26] [INFO] System started
+[2026-02-10 11:06:29] [INFO] System shutdown
+[2026-02-11 08:33:28] [INFO] System started
+[2026-02-11 08:33:42] [INFO] System shutdown
+[2026-02-11 13:21:26] [INFO] System started
+[2026-02-11 13:22:04] [INFO] System shutdown
+[2026-02-11 13:22:21] [INFO] System started
+[2026-02-11 13:22:48] [INFO] System shutdown
+[2026-02-11 13:23:05] [INFO] System started
+[2026-02-11 13:24:09] [INFO] System shutdown
+[2026-02-11 13:24:16] [INFO] System started
+[2026-02-11 13:24:25] [INFO] System shutdown
+[2026-02-11 13:24:34] [INFO] System started
+[2026-02-11 13:25:45] [INFO] System shutdown
+[2026-02-11 13:32:02] [INFO] System started
+[2026-02-11 13:32:15] [INFO] State changed to: GREETING
+[2026-02-11 13:34:42] [INFO] System shutdown
+[2026-02-11 13:43:17] [INFO] System started
+[2026-02-11 13:44:01] [INFO] System shutdown
+[2026-02-11 14:11:14] [INFO] System started
+[2026-02-11 14:11:40] [INFO] System shutdown
+[2026-02-11 14:11:46] [INFO] System started
+[2026-02-11 14:11:56] [INFO] System shutdown
+[2026-02-11 14:12:12] [INFO] System started
+[2026-02-11 14:14:24] [INFO] System shutdown
+[2026-02-11 14:14:43] [INFO] System started
+[2026-02-11 14:15:11] [INFO] System shutdown
+[2026-02-11 14:21:03] [INFO] System started
+[2026-02-11 14:22:06] [INFO] System shutdown
+[2026-02-11 14:27:15] [INFO] System started
+[2026-02-11 14:27:17] [INFO] State changed to: LISTENING
+[2026-02-11 14:27:19] [INFO] State changed to: THINKING
+[2026-02-11 14:27:35] [INFO] State changed to: ANGRY
+[2026-02-11 14:27:49] [INFO] System shutdown
+[2026-02-12 15:50:22] [INFO] System started
+[2026-02-12 15:50:54] [INFO] State changed to: GREETING
+[2026-02-12 15:52:32] [INFO] System shutdown
+[2026-02-12 18:07:12] [INFO] System started
+[2026-02-12 18:07:56] [INFO] System shutdown
+[2026-02-12 18:10:24] [INFO] System started
+[2026-02-12 18:11:11] [INFO] State changed to: GREETING
+[2026-02-12 18:11:29] [INFO] System shutdown
+[2026-02-12 18:11:37] [INFO] System started
+[2026-02-12 18:12:21] [INFO] System shutdown
+[2026-02-12 19:32:55] [INFO] System started
+[2026-02-12 19:34:11] [INFO] System shutdown
+[2026-02-12 19:34:35] [INFO] System started
+[2026-02-12 19:35:10] [INFO] System shutdown
+[2026-02-12 19:35:17] [INFO] System started
+[2026-02-12 19:35:42] [INFO] System shutdown
+[2026-02-12 19:35:49] [INFO] System started
+[2026-02-12 19:35:59] [INFO] System shutdown
+[2026-02-12 19:36:15] [INFO] System started
+[2026-02-12 19:36:57] [INFO] System shutdown
+[2026-02-14 11:21:08] [INFO] System started
+[2026-02-14 11:21:32] [INFO] System shutdown
+[2026-02-14 11:31:18] [INFO] System started
+[2026-02-14 11:38:10] [INFO] System started
+[2026-02-14 11:39:43] [INFO] System shutdown
+[2026-02-14 11:42:57] [INFO] System started
+[2026-02-14 11:43:47] [INFO] System shutdown
+[2026-02-14 11:44:27] [INFO] System started
+[2026-02-14 11:44:45] [INFO] System shutdown
+[2026-02-14 11:46:50] [INFO] System started
+[2026-02-14 11:48:26] [INFO] System shutdown
+[2026-02-14 11:52:35] [INFO] System started
+[2026-02-14 11:52:50] [INFO] System shutdown
+[2026-02-14 11:53:04] [INFO] System started
+[2026-02-14 11:54:03] [INFO] System shutdown
+[2026-02-15 12:12:46] [INFO] System started
+[2026-02-15 12:12:53] [INFO] System shutdown
+[2026-02-15 12:13:25] [INFO] System started
+[2026-02-15 12:13:46] [INFO] System shutdown
+[2026-02-15 12:42:24] [INFO] System started
+[2026-02-15 12:43:15] [INFO] System shutdown
+[2026-02-15 12:51:53] [INFO] System started
+[2026-02-15 12:52:47] [INFO] System shutdown
+[2026-02-15 12:59:56] [INFO] System started
+[2026-02-15 13:00:27] [INFO] State changed to: GREETING
+[2026-02-15 13:00:47] [INFO] State changed to: GREETING
+[2026-02-15 13:01:49] [INFO] State changed to: GREETING
+[2026-02-15 13:03:06] [INFO] State changed to: GREETING
+[2026-02-15 13:03:20] [INFO] State changed to: GREETING
+[2026-02-15 13:03:40] [INFO] System shutdown
+[2026-02-15 14:55:22] [INFO] System started
+[2026-02-15 14:55:31] [INFO] State changed to: GREETING
+[2026-02-15 14:55:42] [INFO] System shutdown
+[2026-02-15 14:55:56] [INFO] System started
+[2026-02-15 14:56:58] [INFO] System shutdown
+[2026-02-16 09:22:30] [INFO] System started
+[2026-02-16 09:22:42] [INFO] State changed to: IDLE
+[2026-02-16 09:23:01] [INFO] State changed to: IDLE
+[2026-02-16 09:23:28] [INFO] State changed to: THINKING
+[2026-02-16 09:23:29] [INFO] State changed to: GREETING
+[2026-02-16 09:23:40] [INFO] State changed to: THINKING
+[2026-02-16 09:23:40] [INFO] State changed to: GREETING
+[2026-02-16 09:23:52] [INFO] System shutdown
+[2026-02-16 09:30:01] [INFO] System started
+[2026-02-16 09:30:05] [INFO] State changed to: THINKING
+[2026-02-16 09:30:07] [INFO] State changed to: GREETING
+[2026-02-16 09:30:12] [INFO] State changed to: THINKING
+[2026-02-16 09:30:13] [INFO] State changed to: GREETING
+[2026-02-16 09:30:23] [INFO] State changed to: THINKING
+[2026-02-16 09:30:23] [INFO] State changed to: GREETING
+[2026-02-16 09:30:39] [INFO] System shutdown
+[2026-02-16 09:31:10] [INFO] System started
+[2026-02-16 09:31:19] [INFO] State changed to: THINKING
+[2026-02-16 09:31:31] [INFO] State changed to: GREETING
+[2026-02-16 09:31:54] [INFO] State changed to: IDLE
+[2026-02-16 09:32:03] [INFO] State changed to: SURPRISED
+[2026-02-16 09:32:09] [INFO] System shutdown
+[2026-02-16 10:32:04] [INFO] System started
+[2026-02-16 10:35:03] [INFO] System started
+[2026-02-16 10:38:08] [INFO] System started
+[2026-02-16 10:42:32] [INFO] System started
+[2026-02-16 10:42:44] [INFO] State changed to: THINKING
+[2026-02-16 10:46:47] [INFO] System shutdown
+[2026-02-16 10:47:22] [INFO] System started
+[2026-02-16 10:48:17] [INFO] System shutdown
+[2026-02-16 10:52:53] [INFO] System started
+[2026-02-16 10:53:36] [INFO] State changed to: THINKING
+[2026-02-16 10:53:36] [INFO] State changed to: GREETING
+[2026-02-16 10:53:51] [INFO] State changed to: THINKING
+[2026-02-16 10:54:07] [INFO] System shutdown
+[2026-02-16 10:54:38] [INFO] System started
+[2026-02-16 10:54:56] [INFO] State changed to: THINKING
+[2026-02-16 10:55:05] [INFO] State changed to: THINKING
+[2026-02-16 10:55:18] [INFO] System shutdown
+[2026-02-16 10:55:26] [INFO] System started
+[2026-02-16 10:55:49] [INFO] System shutdown
+[2026-02-16 10:58:38] [INFO] System started
+[2026-02-16 10:59:19] [INFO] State changed to: GREETING
+[2026-02-16 10:59:40] [INFO] State changed to: THINKING
+[2026-02-16 11:02:07] [INFO] State changed to: IDLE
+[2026-02-16 11:03:09] [INFO] State changed to: THINKING
+[2026-02-16 11:03:15] [INFO] System shutdown
+[2026-02-16 11:03:28] [INFO] System started
+[2026-02-16 11:03:45] [INFO] State changed to: THINKING
+[2026-02-16 11:03:46] [INFO] State changed to: GREETING
+[2026-02-16 11:03:55] [INFO] State changed to: THINKING
+[2026-02-16 11:04:33] [INFO] System shutdown
+[2026-02-16 11:04:55] [INFO] System started
+[2026-02-16 11:05:15] [INFO] State changed to: GREETING
+[2026-02-16 11:05:22] [INFO] System shutdown
+[2026-02-16 11:05:33] [INFO] System started
+[2026-02-16 11:05:43] [INFO] State changed to: GREETING
+[2026-02-16 11:05:54] [INFO] System shutdown
+[2026-02-16 11:06:01] [INFO] System started
+[2026-02-16 11:06:16] [INFO] State changed to: HELPING
+[2026-02-16 11:06:35] [INFO] System shutdown
+[2026-02-16 11:10:50] [INFO] System started
+[2026-02-16 11:11:13] [INFO] State changed to: GREETING
+[2026-02-16 11:11:29] [INFO] System shutdown
+[2026-02-16 16:32:41] [INFO] System started
+[2026-02-16 16:58:00] [INFO] System started
+[2026-02-18 01:35:34] [INFO] System started
+[2026-02-18 01:35:57] [INFO] State changed to: THINKING
+[2026-02-18 01:39:34] [INFO] System shutdown
+[2026-02-18 01:41:52] [INFO] System started
+[2026-02-18 01:42:10] [INFO] State changed to: THINKING
+[2026-02-18 01:42:26] [INFO] State changed to: THINKING
+[2026-02-18 01:43:14] [INFO] State changed to: THINKING
+[2026-02-18 01:44:15] [INFO] State changed to: GREETING
+[2026-02-18 01:44:32] [INFO] State changed to: GREETING
+[2026-02-18 01:48:45] [INFO] System shutdown
+[2026-02-18 02:22:10] [INFO] System started
+[2026-02-18 02:23:20] [INFO] System shutdown
+[2026-02-18 09:44:42] [INFO] System started
+[2026-02-18 09:45:18] [INFO] State changed to: GREETING
+[2026-02-18 09:46:30] [INFO] System shutdown
+[2026-02-18 15:13:37] [INFO] System started
+[2026-02-18 15:15:13] [INFO] System shutdown
+[2026-02-18 15:19:01] [INFO] System started
+[2026-02-18 15:19:11] [INFO] System shutdown
+[2026-02-18 15:20:00] [INFO] System started
+[2026-02-18 15:23:06] [INFO] State changed to: IDLE
+[2026-02-18 15:23:10] [INFO] System shutdown
+[2026-02-18 15:27:25] [INFO] System started
+[2026-02-18 15:27:33] [INFO] System shutdown
+[2026-02-18 15:28:35] [INFO] System started
+[2026-02-18 15:28:55] [INFO] System shutdown
+[2026-02-18 15:33:46] [INFO] System started
+[2026-02-18 15:33:58] [INFO] System shutdown
+[2026-02-18 22:32:51] [INFO] System started
+[2026-02-18 22:33:27] [INFO] System shutdown
+[2026-02-18 22:33:35] [INFO] System started
+[2026-02-18 22:33:56] [INFO] System shutdown
+[2026-02-18 22:34:05] [INFO] System started
+[2026-02-18 22:34:45] [INFO] System shutdown
+[2026-02-18 22:36:26] [INFO] System started
+[2026-02-18 22:36:34] [INFO] System started
+[2026-02-18 22:37:20] [INFO] System shutdown
+[2026-02-18 22:41:23] [INFO] System started
+[2026-02-18 22:42:49] [INFO] System shutdown
+[2026-02-18 22:44:16] [INFO] System started
+[2026-02-18 22:45:32] [INFO] State changed to: THINKING
+[2026-02-18 22:45:32] [INFO] State changed to: GREETING
+[2026-02-18 22:46:05] [INFO] State changed to: THINKING
+[2026-02-18 22:46:06] [INFO] State changed to: GREETING
+[2026-02-18 22:46:08] [INFO] State changed to: THINKING
+[2026-02-18 22:46:48] [INFO] System shutdown
+[2026-02-18 23:10:31] [INFO] System started
+[2026-02-18 23:10:43] [INFO] State changed to: GREETING
+[2026-02-18 23:11:00] [INFO] System shutdown
+[2026-02-18 23:14:28] [INFO] System started
+[2026-02-18 23:16:34] [INFO] State changed to: THINKING
+[2026-02-18 23:16:35] [INFO] State changed to: GREETING
+[2026-02-18 23:16:41] [INFO] System shutdown
+[2026-02-18 23:18:45] [INFO] System started
+[2026-02-18 23:18:52] [INFO] System shutdown
+[2026-02-18 23:19:34] [INFO] System started
+[2026-02-18 23:19:55] [INFO] State changed to: IDLE
+[2026-02-18 23:20:19] [INFO] State changed to: GREETING
+[2026-02-18 23:20:43] [INFO] System shutdown
+[2026-02-18 23:21:08] [INFO] System started
+[2026-02-18 23:21:20] [INFO] State changed to: GREETING
+[2026-02-18 23:21:43] [INFO] System shutdown
+[2026-02-18 23:22:31] [INFO] System started
+[2026-02-18 23:22:42] [INFO] System shutdown
+[2026-02-18 23:23:31] [INFO] System started
+[2026-02-18 23:23:45] [INFO] State changed to: GREETING
+[2026-02-18 23:24:15] [INFO] System shutdown
+[2026-02-18 23:24:23] [INFO] System started
+[2026-02-18 23:24:31] [INFO] System shutdown
+[2026-02-18 23:24:50] [INFO] System started
+[2026-02-18 23:26:09] [INFO] System shutdown
+[2026-02-18 23:27:12] [INFO] System started
+[2026-02-18 23:27:29] [INFO] System shutdown
+[2026-02-18 23:27:53] [INFO] System started
+[2026-02-18 23:28:26] [INFO] State changed to: GREETING
+[2026-02-18 23:28:49] [INFO] State changed to: THINKING
+[2026-02-18 23:28:59] [INFO] System shutdown
+[2026-02-18 23:29:09] [INFO] System started
+[2026-02-18 23:29:15] [INFO] System shutdown
+[2026-02-18 23:29:33] [INFO] System started
+[2026-02-18 23:30:02] [INFO] State changed to: THINKING
+[2026-02-18 23:30:10] [INFO] System shutdown
+[2026-02-18 23:30:29] [INFO] System started
+[2026-02-18 23:30:55] [INFO] State changed to: THINKING
+[2026-02-18 23:31:00] [INFO] System shutdown
+[2026-02-18 23:31:18] [INFO] System started
+[2026-02-18 23:31:27] [INFO] System shutdown
+[2026-02-18 23:31:45] [INFO] System started
+[2026-02-18 23:32:14] [INFO] State changed to: GREETING
+[2026-02-18 23:32:25] [INFO] State changed to: GREETING
+[2026-02-18 23:32:38] [INFO] System shutdown
+[2026-02-18 23:32:54] [INFO] System started
+[2026-02-18 23:33:46] [INFO] System shutdown
+[2026-02-18 23:33:59] [INFO] System started
+[2026-02-18 23:34:06] [INFO] System shutdown
+[2026-02-18 23:34:47] [INFO] System started
+[2026-02-18 23:35:23] [INFO] State changed to: GREETING
+[2026-02-18 23:35:46] [INFO] State changed to: GREETING
+[2026-02-18 23:36:05] [INFO] System shutdown
+[2026-03-17 14:47:16] [INFO] System started
+[2026-03-17 14:47:21] [INFO] State changed to: GREETING
+[2026-03-17 14:47:44] [INFO] State changed to: GREETING
+[2026-03-17 14:48:09] [INFO] System shutdown
+[2026-03-17 15:13:06] [INFO] System started
+[2026-03-17 15:13:33] [INFO] System shutdown
+[2026-03-17 15:14:02] [INFO] System started
+[2026-03-17 15:14:14] [INFO] System shutdown
+[2026-03-17 15:24:04] [INFO] System started
+[2026-03-17 15:24:41] [INFO] State changed to: GREETING
+[2026-03-17 15:24:53] [INFO] System shutdown
+[2026-03-17 15:36:11] [INFO] System started
+[2026-03-17 15:36:57] [INFO] State changed to: GREETING
+[2026-03-17 15:37:07] [INFO] State changed to: GREETING
+[2026-03-17 15:37:40] [INFO] System shutdown
+[2026-03-17 15:38:05] [INFO] System started
+[2026-03-17 15:38:40] [INFO] System shutdown
+[2026-03-17 16:13:21] [INFO] System started
+[2026-03-17 16:14:16] [INFO] State changed to: GREETING
+[2026-03-17 16:15:01] [INFO] State changed to: IDLE
+[2026-03-17 16:15:06] [INFO] System shutdown
+[2026-03-17 16:15:37] [INFO] System started
+[2026-03-17 16:16:12] [INFO] State changed to: THINKING
+[2026-03-17 16:16:20] [INFO] System shutdown
+[2026-03-17 16:18:20] [INFO] System started
+[2026-03-17 16:18:40] [INFO] State changed to: GREETING
+[2026-03-17 16:18:46] [INFO] State changed to: GREETING
+[2026-03-17 16:18:49] [INFO] State changed to: GREETING
+[2026-03-17 16:19:03] [INFO] State changed to: IDLE
+[2026-03-17 16:19:09] [INFO] State changed to: GREETING
+[2026-03-17 16:19:13] [INFO] State changed to: GREETING
+[2026-03-17 16:19:15] [INFO] System shutdown
+[2026-03-17 16:20:22] [INFO] System started
+[2026-03-17 16:20:32] [INFO] State changed to: THINKING
+[2026-03-17 16:20:40] [INFO] System shutdown
+[2026-03-17 16:21:25] [INFO] System started
+[2026-03-17 16:21:30] [INFO] State changed to: GREETING
+[2026-03-17 16:21:41] [INFO] System shutdown
+[2026-03-17 16:25:40] [INFO] System started
+[2026-03-17 16:25:59] [INFO] State changed to: GREETING
+[2026-03-17 16:28:27] [INFO] System shutdown
+[2026-03-17 22:14:46] [INFO] System started
+[2026-03-17 22:14:52] [INFO] State changed to: GREETING
+[2026-03-17 22:15:26] [INFO] System shutdown
+[2026-03-17 22:15:32] [INFO] System started
+[2026-03-17 22:15:34] [INFO] State changed to: GREETING
+[2026-03-17 22:16:30] [INFO] System shutdown
+[2026-03-17 22:20:33] [INFO] System started
+[2026-03-17 22:20:35] [INFO] State changed to: GREETING
+[2026-03-17 22:20:43] [INFO] State changed to: GREETING
+[2026-03-17 22:20:58] [INFO] System shutdown
+[2026-03-17 22:22:49] [INFO] System started
+[2026-03-17 22:23:02] [INFO] System shutdown
+[2026-03-17 22:23:08] [INFO] System started
+[2026-03-17 22:23:19] [INFO] System shutdown
+[2026-03-17 22:25:16] [INFO] System started
+[2026-03-17 22:25:28] [INFO] System shutdown
+[2026-03-17 22:42:17] [INFO] System started
+[2026-03-17 22:42:48] [INFO] System shutdown
+[2026-03-17 22:42:53] [INFO] System started
+[2026-03-17 22:43:26] [INFO] State changed to: GREETING
+[2026-03-17 22:43:35] [INFO] System shutdown
+[2026-03-17 22:43:47] [INFO] System started
+[2026-03-17 22:43:59] [INFO] System shutdown
+[2026-03-17 22:44:07] [INFO] System started
+[2026-03-17 22:44:50] [INFO] System shutdown
+[2026-03-17 22:45:02] [INFO] System started
+[2026-03-17 22:45:24] [INFO] State changed to: GREETING
+[2026-03-17 22:45:33] [INFO] System shutdown
+[2026-03-17 22:45:52] [INFO] System started
+[2026-03-17 22:45:57] [INFO] State changed to: GREETING
+[2026-03-17 22:46:41] [INFO] State changed to: GREETING
+[2026-03-17 22:47:00] [INFO] System shutdown
+[2026-03-17 22:48:05] [INFO] System started
+[2026-03-17 22:48:13] [INFO] State changed to: GREETING
+[2026-03-17 22:48:29] [INFO] System shutdown
+[2026-03-17 22:48:47] [INFO] System started
+[2026-03-17 22:48:51] [INFO] State changed to: GREETING
+[2026-03-17 22:49:10] [INFO] System shutdown
+[2026-03-17 23:06:40] [INFO] System started
+[2026-03-17 23:07:00] [INFO] System shutdown
+[2026-03-17 23:07:14] [INFO] System started
+[2026-03-17 23:07:16] [INFO] State changed to: GREETING
+[2026-03-17 23:07:33] [INFO] System shutdown
+[2026-03-17 23:09:26] [INFO] System started
+[2026-03-17 23:09:38] [INFO] State changed to: GREETING
+[2026-03-17 23:09:52] [INFO] System shutdown
+[2026-03-17 23:09:59] [INFO] System started
+[2026-03-17 23:10:01] [INFO] State changed to: GREETING
+[2026-03-17 23:10:47] [INFO] System shutdown
+[2026-03-17 23:19:46] [INFO] System started
+[2026-03-17 23:19:49] [INFO] State changed to: GREETING
+[2026-03-17 23:20:06] [INFO] System shutdown
+[2026-03-17 23:36:55] [INFO] System started
+[2026-03-17 23:38:04] [INFO] State changed to: GREETING
+[2026-03-17 23:38:12] [INFO] State changed to: IDLE
+[2026-03-17 23:38:13] [INFO] State changed to: GREETING
+[2026-03-17 23:38:21] [INFO] State changed to: IDLE
+[2026-03-17 23:38:22] [INFO] State changed to: GREETING
+[2026-03-17 23:38:30] [INFO] System shutdown
+[2026-03-17 23:38:36] [INFO] System started
+[2026-03-17 23:38:44] [INFO] State changed to: GREETING
+[2026-03-17 23:38:58] [INFO] State changed to: IDLE
+[2026-03-17 23:39:10] [INFO] State changed to: GREETING
+[2026-03-17 23:39:25] [INFO] System shutdown
+[2026-03-18 00:02:54] [INFO] System started
+[2026-03-18 00:02:55] [INFO] State changed to: GREETING
+[2026-03-18 00:03:19] [INFO] State changed to: GREETING
+[2026-03-18 00:03:48] [INFO] System shutdown
+[2026-03-18 08:15:36] [INFO] System started
+[2026-03-18 08:15:37] [INFO] State changed to: GREETING
+[2026-03-18 08:15:56] [INFO] State changed to: IDLE
+[2026-03-18 08:16:08] [INFO] State changed to: GREETING
+[2026-03-18 08:16:18] [INFO] State changed to: IDLE
+[2026-03-18 08:16:21] [INFO] State changed to: GREETING
+[2026-03-18 08:16:32] [INFO] State changed to: IDLE
+[2026-03-18 08:16:45] [INFO] System shutdown
+[2026-03-18 08:16:52] [INFO] System started
+[2026-03-18 08:17:43] [INFO] System shutdown
+[2026-03-18 08:17:50] [INFO] System started
+[2026-03-18 08:18:46] [INFO] System shutdown
+[2026-03-18 08:27:12] [INFO] System started
+[2026-03-18 08:27:22] [INFO] State changed to: GREETING
+[2026-03-18 08:27:30] [INFO] State changed to: IDLE
+[2026-03-18 08:27:39] [INFO] State changed to: THINKING
+[2026-03-18 08:27:39] [INFO] State changed to: GREETING
+[2026-03-18 08:27:39] [INFO] State changed to: GREETING
+[2026-03-18 08:27:46] [INFO] State changed to: GREETING
+[2026-03-18 08:27:46] [INFO] State changed to: GREETING
+[2026-03-18 08:27:54] [INFO] State changed to: IDLE
+[2026-03-18 08:27:55] [INFO] State changed to: GREETING
+[2026-03-18 08:28:07] [INFO] System shutdown
+[2026-03-18 08:36:16] [INFO] System started
+[2026-03-18 08:36:22] [INFO] State changed to: GREETING
+[2026-03-18 08:36:29] [INFO] State changed to: GREETING
+[2026-03-18 08:36:38] [INFO] State changed to: GREETING
+[2026-03-18 08:36:46] [INFO] State changed to: GREETING
+[2026-03-18 08:36:48] [INFO] System shutdown
+[2026-03-18 08:40:19] [INFO] System started
+[2026-03-18 08:40:29] [INFO] State changed to: GREETING
+[2026-03-18 08:40:34] [INFO] State changed to: GREETING
+[2026-03-18 08:40:47] [INFO] System shutdown
+[2026-03-18 09:00:14] [INFO] System started
+[2026-03-18 09:00:19] [INFO] State changed to: GREETING
+[2026-03-18 09:00:58] [INFO] State changed to: IDLE
+[2026-03-18 09:00:59] [INFO] State changed to: GREETING
+[2026-03-18 09:01:33] [INFO] State changed to: GREETING
+[2026-03-18 09:01:45] [INFO] State changed to: GREETING
+[2026-03-18 09:01:49] [INFO] State changed to: GREETING
+[2026-03-18 09:02:03] [INFO] State changed to: IDLE
+[2026-03-18 09:02:06] [INFO] State changed to: GREETING
+[2026-03-18 09:02:14] [INFO] State changed to: IDLE
+[2026-03-18 09:02:28] [INFO] State changed to: THINKING
+[2026-03-18 09:02:29] [INFO] State changed to: GREETING
+[2026-03-18 09:02:30] [INFO] State changed to: GREETING
+[2026-03-18 09:02:41] [INFO] State changed to: IDLE
+[2026-03-18 09:02:54] [INFO] State changed to: GREETING
+[2026-03-18 09:03:02] [INFO] State changed to: IDLE
+[2026-03-18 09:03:02] [INFO] State changed to: THINKING
+[2026-03-18 09:03:02] [INFO] State changed to: GREETING
+[2026-03-18 09:03:09] [INFO] State changed to: GREETING
+[2026-03-18 09:03:11] [INFO] State changed to: GREETING
+[2026-03-18 09:03:24] [INFO] State changed to: IDLE
+[2026-03-18 09:03:25] [INFO] State changed to: GREETING
+[2026-03-18 09:03:33] [INFO] System shutdown
+[2026-03-18 09:04:36] [INFO] System started
+[2026-03-18 09:04:39] [INFO] State changed to: GREETING
+[2026-03-18 09:04:42] [INFO] State changed to: GREETING
+[2026-03-18 09:04:50] [INFO] System shutdown
+[2026-03-18 09:04:56] [INFO] System started
+[2026-03-18 09:04:58] [INFO] State changed to: GREETING
+[2026-03-18 09:05:11] [INFO] System shutdown
+[2026-03-18 09:09:52] [INFO] System started
+[2026-03-18 09:10:20] [INFO] State changed to: GREETING
+[2026-03-18 09:10:28] [INFO] State changed to: IDLE
+[2026-03-18 09:10:31] [INFO] State changed to: GREETING
+[2026-03-18 09:15:50] [INFO] System started
+[2026-03-18 09:16:06] [INFO] State changed to: GREETING
+[2026-03-18 09:16:57] [INFO] State changed to: IDLE
+[2026-03-18 09:16:59] [INFO] State changed to: GREETING
+[2026-03-18 09:17:10] [INFO] State changed to: GREETING
+[2026-03-18 09:17:14] [INFO] State changed to: GREETING
+[2026-03-18 09:17:33] [INFO] System shutdown
+[2026-03-18 09:17:39] [INFO] System started
+[2026-03-18 09:17:57] [INFO] State changed to: IDLE
+[2026-03-18 09:18:22] [INFO] State changed to: IDLE
+[2026-03-18 09:18:32] [INFO] State changed to: GREETING
+[2026-03-18 09:19:18] [INFO] State changed to: IDLE
+[2026-03-18 09:19:21] [INFO] State changed to: GREETING
+[2026-03-18 09:19:24] [INFO] System shutdown
+[2026-03-18 09:22:38] [INFO] System started
+[2026-03-18 09:22:46] [INFO] State changed to: GREETING
+[2026-03-18 09:23:52] [INFO] State changed to: GREETING
+[2026-03-18 09:24:04] [INFO] State changed to: GREETING
+[2026-03-18 09:24:13] [INFO] State changed to: GREETING
+[2026-03-18 09:24:42] [INFO] System shutdown
+[2026-03-18 09:24:55] [INFO] System started
+[2026-03-18 09:25:01] [INFO] State changed to: GREETING
+[2026-03-18 09:25:26] [INFO] State changed to: IDLE
+[2026-03-18 09:25:35] [INFO] System shutdown
+[2026-03-18 09:45:57] [INFO] System started
+[2026-03-18 09:46:03] [INFO] State changed to: GREETING
+[2026-03-18 09:46:27] [INFO] State changed to: GREETING
+[2026-03-18 09:46:38] [INFO] State changed to: GREETING
+[2026-03-18 09:46:58] [INFO] System shutdown
+[2026-03-18 09:47:04] [INFO] System started
+[2026-03-18 09:47:07] [INFO] State changed to: GREETING
+[2026-03-18 09:47:16] [INFO] State changed to: GREETING
+[2026-03-18 09:47:57] [INFO] State changed to: GREETING
+[2026-03-18 09:48:06] [INFO] System shutdown
+[2026-03-18 09:51:59] [INFO] System started
+[2026-03-18 09:52:04] [INFO] State changed to: GREETING
+[2026-03-18 09:52:18] [INFO] State changed to: GREETING
+[2026-03-18 09:52:30] [INFO] State changed to: GREETING
+[2026-03-18 09:53:19] [INFO] State changed to: IDLE
+[2026-03-18 09:53:42] [INFO] System shutdown
+[2026-03-18 09:53:49] [INFO] System started
+[2026-03-18 09:53:56] [INFO] State changed to: GREETING
+[2026-03-18 09:54:09] [INFO] State changed to: GREETING
+[2026-03-18 09:54:20] [INFO] System shutdown
+[2026-03-18 09:54:26] [INFO] System started
+[2026-03-18 09:54:29] [INFO] State changed to: GREETING
+[2026-03-18 09:54:39] [INFO] State changed to: GREETING
+[2026-03-18 09:54:53] [INFO] State changed to: GREETING
+[2026-03-18 09:55:02] [INFO] State changed to: GREETING
+[2026-03-18 09:55:02] [INFO] System shutdown
+[2026-03-18 09:55:15] [INFO] System started
+[2026-03-18 09:55:18] [INFO] State changed to: GREETING
+[2026-03-18 09:55:24] [INFO] System shutdown
+[2026-03-18 09:55:30] [INFO] System started
+[2026-03-18 09:55:33] [INFO] State changed to: GREETING
+[2026-03-18 09:55:43] [INFO] State changed to: GREETING
+[2026-03-18 09:55:53] [INFO] System shutdown
+[2026-03-18 09:55:59] [INFO] System started
+[2026-03-18 09:56:02] [INFO] State changed to: GREETING
+[2026-03-18 09:57:01] [INFO] System shutdown
+[2026-03-18 09:57:29] [INFO] System started
+[2026-03-18 09:57:33] [INFO] State changed to: GREETING
+[2026-03-18 09:58:27] [INFO] State changed to: IDLE
+[2026-03-18 09:58:40] [INFO] State changed to: IDLE
+[2026-03-18 09:59:34] [INFO] State changed to: GREETING
+[2026-03-18 13:36:12] [INFO] System started
+[2026-03-18 13:36:16] [INFO] State changed to: GREETING
+[2026-03-18 13:45:07] [INFO] System started
+[2026-03-18 13:45:19] [INFO] State changed to: IDLE
+[2026-03-18 13:46:42] [INFO] State changed to: GREETING
+[2026-03-18 13:46:46] [INFO] State changed to: GREETING
+[2026-03-18 13:48:55] [INFO] System started
+[2026-03-18 13:49:23] [INFO] State changed to: IDLE
+[2026-03-18 13:51:02] [INFO] State changed to: GREETING
+[2026-03-18 13:51:12] [INFO] State changed to: IDLE
+[2026-03-18 13:51:26] [INFO] System shutdown
+[2026-03-18 13:57:25] [INFO] System started
+[2026-03-18 13:57:28] [INFO] State changed to: GREETING
+[2026-03-18 13:57:32] [INFO] State changed to: GREETING
+[2026-03-18 13:57:56] [INFO] State changed to: GREETING
+[2026-03-18 13:58:06] [INFO] State changed to: GREETING
+[2026-03-18 13:58:51] [INFO] State changed to: GREETING
+[2026-03-18 13:59:01] [INFO] State changed to: GREETING
+[2026-03-18 13:59:12] [INFO] System shutdown
+[2026-03-18 13:59:18] [INFO] System started
+[2026-03-18 13:59:22] [INFO] State changed to: GREETING
+[2026-03-18 14:03:04] [INFO] System started
+[2026-03-18 14:03:17] [INFO] State changed to: GREETING
+[2026-03-18 14:03:19] [INFO] System shutdown
+[2026-03-18 14:03:31] [INFO] System started
+[2026-03-18 14:03:47] [INFO] State changed to: GREETING
+[2026-03-18 14:03:47] [INFO] State changed to: GREETING
+[2026-03-18 14:04:37] [INFO] State changed to: IDLE
+[2026-03-18 14:04:42] [INFO] State changed to: GREETING
+[2026-03-18 14:04:52] [INFO] System shutdown
+[2026-03-18 14:04:59] [INFO] System started
+[2026-03-18 14:05:04] [INFO] State changed to: GREETING
+[2026-03-18 14:05:35] [INFO] State changed to: GREETING
+[2026-03-18 14:06:09] [INFO] System shutdown
+[2026-03-18 14:07:46] [INFO] System started
+[2026-03-18 14:08:40] [INFO] System shutdown
+[2026-03-18 14:11:26] [INFO] System started
+[2026-03-18 14:14:00] [INFO] System shutdown
+[2026-03-18 14:14:13] [INFO] System started
+[2026-03-18 14:14:20] [INFO] State changed to: GREETING
+[2026-03-18 14:14:39] [INFO] System shutdown
+[2026-03-18 14:15:29] [INFO] System started
+[2026-03-18 14:15:35] [INFO] State changed to: GREETING
+[2026-03-18 14:15:58] [INFO] System started
+[2026-03-18 14:16:08] [INFO] State changed to: GREETING
+[2026-03-18 14:16:24] [INFO] State changed to: GREETING
+[2026-03-18 14:16:54] [INFO] System shutdown
+[2026-03-18 14:16:59] [INFO] System started
+[2026-03-18 14:17:02] [INFO] State changed to: GREETING
+[2026-03-18 14:17:36] [INFO] System shutdown
+[2026-03-18 14:28:30] [INFO] System started
+[2026-03-18 14:28:33] [INFO] State changed to: GREETING
+[2026-03-18 14:28:37] [INFO] State changed to: GREETING
+[2026-03-18 14:28:45] [INFO] System shutdown
+[2026-03-18 14:29:19] [INFO] System started
+[2026-03-18 14:29:23] [INFO] State changed to: GREETING
+[2026-03-18 14:29:30] [INFO] State changed to: GREETING
+[2026-03-18 14:29:35] [INFO] System shutdown
+[2026-03-18 14:29:43] [INFO] System started
+[2026-03-18 14:29:47] [INFO] State changed to: GREETING
+[2026-03-18 14:30:25] [INFO] State changed to: GREETING
+[2026-03-18 14:31:03] [INFO] System shutdown
+[2026-03-18 15:44:09] [INFO] System started
+[2026-03-18 15:45:10] [INFO] System shutdown
+[2026-03-18 15:47:21] [INFO] System started
+[2026-03-18 15:47:26] [INFO] State changed to: GREETING
+[2026-03-18 15:47:30] [INFO] State changed to: GREETING
+[2026-03-18 15:47:36] [INFO] System shutdown
+[2026-03-18 15:47:42] [INFO] System started
+[2026-03-18 15:47:46] [INFO] State changed to: GREETING
+[2026-03-18 15:47:52] [INFO] System shutdown
+[2026-03-18 15:48:48] [INFO] System started
+[2026-03-18 15:48:53] [INFO] State changed to: GREETING
+[2026-03-18 15:50:13] [INFO] System shutdown
+[2026-03-18 15:50:18] [INFO] System started
+[2026-03-18 15:50:28] [INFO] State changed to: GREETING
+[2026-03-18 15:50:46] [INFO] System shutdown
+[2026-03-18 15:50:51] [INFO] System started
+[2026-03-18 15:50:54] [INFO] State changed to: GREETING
+[2026-03-18 15:51:07] [INFO] System shutdown
+[2026-03-18 15:52:08] [INFO] System started
+[2026-03-18 15:52:41] [INFO] System shutdown
+[2026-03-18 15:59:31] [INFO] System started
+[2026-03-18 15:59:35] [INFO] State changed to: GREETING
+[2026-03-18 15:59:42] [INFO] System shutdown
+[2026-03-18 15:59:56] [INFO] System started
+[2026-03-18 16:00:00] [INFO] State changed to: GREETING
+[2026-03-18 16:00:11] [INFO] System shutdown
+[2026-03-18 16:00:17] [INFO] System started
+[2026-03-18 16:00:21] [INFO] State changed to: GREETING
+[2026-03-18 16:00:31] [INFO] System shutdown
+[2026-03-18 16:01:29] [INFO] System started
+[2026-03-18 16:01:35] [INFO] State changed to: GREETING
+[2026-03-18 16:01:47] [INFO] State changed to: IDLE
+[2026-03-18 16:02:01] [INFO] State changed to: GREETING
+[2026-03-18 16:02:12] [INFO] System shutdown
+[2026-03-18 16:02:18] [INFO] System started
+[2026-03-18 16:02:21] [INFO] State changed to: GREETING
+[2026-03-18 16:02:46] [INFO] System shutdown
+[2026-03-18 16:09:49] [INFO] System started
+[2026-03-18 16:11:35] [INFO] System started
+[2026-03-18 16:13:02] [INFO] System shutdown
+[2026-03-18 16:14:11] [INFO] System started
+[2026-03-18 16:14:15] [INFO] State changed to: GREETING
+[2026-03-18 16:14:21] [INFO] System shutdown
+[2026-03-18 20:33:00] [INFO] System started
+[2026-03-18 20:33:06] [INFO] State changed to: GREETING
+[2026-03-18 20:33:21] [INFO] System shutdown
+[2026-03-18 20:33:30] [INFO] System started
+[2026-03-18 20:33:36] [INFO] State changed to: GREETING
+[2026-03-18 20:33:49] [INFO] State changed to: GREETING
+[2026-03-18 20:34:00] [INFO] State changed to: GREETING
+[2026-03-18 20:34:18] [INFO] System shutdown
+[2026-03-18 20:34:24] [INFO] System started
+[2026-03-18 20:34:30] [INFO] State changed to: GREETING
+[2026-03-18 20:34:33] [INFO] State changed to: GREETING
+[2026-03-18 20:34:49] [INFO] System shutdown
+[2026-03-18 20:34:56] [INFO] System started
+[2026-03-18 20:35:02] [INFO] State changed to: GREETING
+[2026-03-18 20:35:03] [INFO] State changed to: GREETING
+[2026-03-18 20:35:22] [INFO] System shutdown
+[2026-03-18 20:35:28] [INFO] System started
+[2026-03-18 20:35:33] [INFO] State changed to: GREETING
+[2026-03-18 20:35:47] [INFO] State changed to: GREETING
+[2026-03-18 20:36:13] [INFO] System shutdown
+[2026-03-18 20:36:19] [INFO] System started
+[2026-03-18 20:36:23] [INFO] State changed to: GREETING
+[2026-03-18 20:36:50] [INFO] System shutdown
+[2026-03-18 20:37:00] [INFO] System started
+[2026-03-18 20:37:04] [INFO] State changed to: GREETING
+[2026-03-18 20:37:08] [INFO] State changed to: GREETING
+[2026-03-18 20:37:14] [INFO] State changed to: GREETING
+[2026-03-18 20:37:22] [INFO] State changed to: GREETING
+[2026-03-18 20:37:34] [INFO] State changed to: GREETING
+[2026-03-18 20:38:01] [INFO] State changed to: GREETING
+[2026-03-18 20:39:01] [INFO] System shutdown
+[2026-03-18 20:41:20] [INFO] System started
+[2026-03-18 20:41:25] [INFO] State changed to: GREETING
+[2026-03-18 20:41:33] [INFO] State changed to: GREETING
+[2026-03-18 20:41:44] [INFO] State changed to: GREETING
+[2026-03-18 20:42:48] [INFO] System shutdown
+[2026-03-18 20:42:54] [INFO] System started
+[2026-03-18 20:42:57] [INFO] State changed to: GREETING
+[2026-03-18 20:43:03] [INFO] State changed to: GREETING
+[2026-03-18 20:43:29] [INFO] State changed to: GREETING
+[2026-03-18 20:43:45] [INFO] System shutdown
+[2026-03-18 20:44:38] [INFO] System started
+[2026-03-18 20:44:43] [INFO] State changed to: GREETING
+[2026-03-18 20:44:47] [INFO] State changed to: GREETING
+[2026-03-18 20:44:54] [INFO] System shutdown
+[2026-03-18 20:45:02] [INFO] System started
+[2026-03-18 20:45:06] [INFO] State changed to: GREETING
+[2026-03-18 20:45:07] [INFO] State changed to: GREETING
+[2026-03-18 20:45:19] [INFO] System started
+[2026-03-18 20:45:23] [INFO] State changed to: GREETING
+[2026-03-18 20:46:02] [INFO] System shutdown
+[2026-03-18 20:47:37] [INFO] System started
+[2026-03-18 20:47:42] [INFO] State changed to: GREETING
+[2026-03-18 20:47:45] [INFO] State changed to: GREETING
+[2026-03-18 20:47:49] [INFO] State changed to: GREETING
+[2026-03-18 22:45:37] [INFO] System started
+[2026-03-18 22:45:44] [INFO] State changed to: GREETING
+[2026-03-18 22:45:46] [INFO] System shutdown
+[2026-03-18 22:46:38] [INFO] System started
+[2026-03-18 22:46:44] [INFO] State changed to: GREETING
+[2026-03-18 22:46:51] [INFO] System shutdown
+[2026-03-18 22:46:57] [INFO] System started
+[2026-03-18 22:47:02] [INFO] State changed to: GREETING
+[2026-03-18 22:47:06] [INFO] System shutdown
+[2026-03-18 22:47:12] [INFO] System started
+[2026-03-18 22:47:17] [INFO] State changed to: GREETING
+[2026-03-18 22:47:24] [INFO] State changed to: GREETING
+[2026-03-18 22:47:28] [INFO] System shutdown
+[2026-03-18 22:47:37] [INFO] System started
+[2026-03-18 22:47:42] [INFO] State changed to: GREETING
+[2026-03-18 22:47:57] [INFO] System shutdown
+[2026-03-18 22:48:07] [INFO] System started
+[2026-03-18 22:48:11] [INFO] State changed to: GREETING
+[2026-03-18 22:48:14] [INFO] State changed to: GREETING
+[2026-03-18 22:48:32] [INFO] System shutdown
+[2026-03-18 22:48:42] [INFO] System started
+[2026-03-18 22:48:47] [INFO] State changed to: GREETING
+[2026-03-18 22:48:58] [INFO] System shutdown
