@@ -1,25 +1,17 @@
-# voice_node_fixed.py - Replace your current voice_node.py with this
 """
-Voice Node — Wake Word Detection + Speech Recognition
-Single microphone access point to avoid conflicts
+Voice Node — Speech-to-text that fills GUI message input
+Uses default microphone with VAD, Whisper transcription, and phonetic matching
 """
 
 import threading
 import time
 import queue
-import os
-import sys
-import ctypes
-import subprocess
-
-# Suppress ALSA at C level
-try:
-    _ALSA_ERR = ctypes.CFUNCTYPE(None, ctypes.c_char_p, ctypes.c_int,
-                                  ctypes.c_char_p, ctypes.c_int, ctypes.c_char_p)
-    ctypes.cdll.LoadLibrary('libasound.so.2').snd_lib_error_set_handler(
-        _ALSA_ERR(lambda *a: None))
-except Exception:
-    pass
+import numpy as np
+import webrtcvad
+import wave
+import io
+import json
+from datetime import datetime
 
 try:
     import speech_recognition as sr
@@ -33,250 +25,408 @@ try:
     PYAUDIO_AVAILABLE = True
 except ImportError:
     PYAUDIO_AVAILABLE = False
+    print("[VOICE_NODE] Run: pip3 install pyaudio")
+
+try:
+    import whisper
+    WHISPER_AVAILABLE = True
+except ImportError:
+    WHISPER_AVAILABLE = False
+    print("[VOICE_NODE] Run: pip3 install openai-whisper")
+
+try:
+    from rapidfuzz import fuzz, utils
+    RAPIDFUZZ_AVAILABLE = True
+except ImportError:
+    RAPIDFUZZ_AVAILABLE = False
+    print("[VOICE_NODE] Run: pip3 install rapidfuzz")
 
 
 class VoiceNode:
-    def __init__(self, command_queue, face_recognition_node=None, 
-                 wake_word="hey aria", use_wake_word=True):
-        self.command_queue = command_queue
+    def __init__(self, command_queue, face_recognition_node=None, wake_word_mode=False):
+        self.command_queue         = command_queue
         self.face_recognition_node = face_recognition_node
-        self.wake_word = wake_word.lower()
-        self.use_wake_word = use_wake_word
-        self.running = False
+        self.wake_word_mode        = wake_word_mode
+        self.running               = False
 
-        self.recognizer = sr.Recognizer() if SR_AVAILABLE else None
-        self.microphone = None
-        self.enabled = SR_AVAILABLE and PYAUDIO_AVAILABLE
+        self.recognizer  = sr.Recognizer() if SR_AVAILABLE else None
+        self.microphone  = None
+        self.enabled     = SR_AVAILABLE and PYAUDIO_AVAILABLE and WHISPER_AVAILABLE
 
-        # State
-        self.is_active = not use_wake_word  # If no wake word, always active
-        self.active_until = 0
-        self.active_duration = 30  # Stay active for 30s after wake word
+        # Initialize Whisper model
+        self.whisper_model = None
+        if WHISPER_AVAILABLE and self.enabled:
+            print("[VOICE_NODE] Loading Whisper small model...")
+            try:
+                self.whisper_model = whisper.load_model("small")
+                print("[VOICE_NODE] Whisper model loaded")
+            except Exception as e:
+                print(f"[VOICE_NODE] Whisper load error: {e}")
+                self.enabled = False
 
-        # Settings
-        if self.recognizer:
-            self.recognizer.energy_threshold = 400
-            self.recognizer.dynamic_energy_threshold = True
-            self.recognizer.pause_threshold = 0.8
-            self.recognizer.phrase_threshold = 0.3
+        # Initialize VAD
+        self.vad = webrtcvad.Vad(2) if webrtcvad else None  # Aggressiveness level 2
+
+        # Known names database (could be loaded from file)
+        self.known_names = self._load_known_names()
+
+        self._active       = not wake_word_mode
+        self._active_until = 0
+        self._active_secs  = 10
+        self._active_lock  = threading.Lock()
 
         self.last_spoken = 0
-        self.cooldown = 1.0
+        self.cooldown    = 1.2
+        self.gui_node = None
+        
+        # Audio buffer for VAD
+        self.audio_buffer = []
+        self.recording = False
+        self.silence_frames = 0
+        self.MAX_SILENCE_FRAMES = 30  # ~0.6 seconds at 50ms frames
+        
+        mode = "wake-word" if wake_word_mode else "continuous"
+        print(f"[VOICE_NODE] Initialized — {mode} mode | enabled: {self.enabled}")
+        print(f"[VOICE_NODE] Known names: {len(self.known_names)} entries")
 
-        mode = "wake-word" if use_wake_word else "continuous"
-        print(f"[VOICE_NODE] Initialized — {mode} mode | Enabled: {self.enabled}")
+    def _load_known_names(self):
+        """Load known names from database or JSON file"""
+        # Example database - would load from actual DB in production
+        return {
+            "chahed": {"name": "Chahed", "variations": ["chahed", "chahid", "shahed", "shahid"]},
+            "mohamed": {"name": "Mohamed", "variations": ["mohamed", "mohammed", "muhammed"]},
+            "sarah": {"name": "Sarah", "variations": ["sarah", "sara"]},
+            "ahmed": {"name": "Ahmed", "variations": ["ahmed", "ahmad", "achmed"]},
+        }
 
-    def _find_working_mic(self):
-        """Test microphones and find first working one"""
-        if not self.enabled:
-            return None
+    def _phonetic_match(self, text, threshold=0.85):
+        """
+        Match transcribed text against known names using phonetic similarity
+        Returns matched name and confidence score
+        """
+        if not RAPIDFUZZ_AVAILABLE:
+            return None, 0.0
+            
+        text_lower = text.lower().strip()
+        
+        best_match = None
+        best_score = 0.0
+        
+        for key, data in self.known_names.items():
+            # Check exact name
+            score = fuzz.ratio(text_lower, key) / 100.0
+            if score > best_score:
+                best_score = score
+                best_match = data["name"]
+            
+            # Check variations
+            for variation in data["variations"]:
+                score = fuzz.ratio(text_lower, variation) / 100.0
+                if score > best_score:
+                    best_score = score
+                    best_match = data["name"]
+        
+        if best_score >= threshold:
+            return best_match, best_score
+        return None, best_score
 
-        try:
-            mic_list = sr.Microphone.list_microphone_names()
-            print(f"[VOICE_NODE] Testing {len(mic_list)} mic(s)...")
+    def _confirm_name(self, suggested_name, original_text):
+        """Ask for confirmation when name confidence is low"""
+        print(f"[VOICE_NODE] Low confidence match: '{original_text}' -> '{suggested_name}' (score: {suggested_name[1]:.2f})")
+        
+        # Could implement confirmation through GUI
+        # For now, return the matched name if confidence > 0.7, otherwise None
+        if suggested_name[1] >= 0.7:
+            return suggested_name[0]
+        
+        # In production, would push to GUI for confirmation
+        self.command_queue.put({
+            'type': 'NAME_CONFIRMATION',
+            'suggested': suggested_name[0],
+            'original': original_text,
+            'score': suggested_name[1]
+        })
+        
+        # Return None to indicate needs confirmation
+        return None
 
-            for i, name in enumerate(mic_list):
-                n = name.lower()
-                # Skip virtual/broken devices
-                if any(bad in n for bad in ['front', 'rear', 'surround', 'iec958',
-                                             'hdmi', 'modem', 'phoneline', 'dmix',
-                                             'dsnoop', 'default']):
-                    continue
+    def activate_wake_word(self):
+        with self._active_lock:
+            self._active       = True
+            self._active_until = time.time() + self._active_secs
+        print(f"[VOICE_NODE] 🎤 Activated for {self._active_secs}s")
 
-                # Quick test
-                try:
-                    test_mic = sr.Microphone(device_index=i)
-                    with test_mic as source:
-                        self.recognizer.adjust_for_ambient_noise(source, duration=0.5)
-                    print(f"[VOICE_NODE] ✓ Working mic [{i}]: {name}")
-                    return i
-                except Exception as e:
-                    print(f"[VOICE_NODE] ✗ Mic [{i}] failed: {e}")
-                    continue
-
-            print("[VOICE_NODE] No working mic found")
-            return None
-
-        except Exception as e:
-            print(f"[VOICE_NODE] Mic scan error: {e}")
-            return None
+    def is_active(self):
+        with self._active_lock:
+            if not self.wake_word_mode:
+                return True
+            if self._active and time.time() < self._active_until:
+                return True
+            if self._active and time.time() >= self._active_until:
+                self._active = False
+                print("[VOICE_NODE] ⏹ Deactivated")
+            return False
 
     def _init_mic(self):
-        """Initialize microphone"""
         if not self.enabled:
             return False
-
-        mic_idx = self._find_working_mic()
-        if mic_idx is None:
-            self.enabled = False
-            return False
-
         try:
-            self.microphone = sr.Microphone(device_index=mic_idx)
-            print("[VOICE_NODE] Calibrating (2s)...")
+            print("[VOICE_NODE] Using default microphone")
+            self.microphone = sr.Microphone()
+            
+            print("[VOICE_NODE] Calibrating (2s, stay quiet)...")
             with self.microphone as source:
                 self.recognizer.adjust_for_ambient_noise(source, duration=2)
-            print(f"[VOICE_NODE] ✓ Ready — threshold: {self.recognizer.energy_threshold:.0f}")
+            
+            threshold = self.recognizer.energy_threshold
+            print(f"[VOICE_NODE] ✓ Ready — threshold: {threshold:.0f}")
             return True
+
         except Exception as e:
             print(f"[VOICE_NODE] Mic init error: {e}")
             self.enabled = False
             return False
 
-    def activate(self):
-        """Activate voice recognition (call this when face detected)"""
-        self.is_active = True
-        self.active_until = time.time() + self.active_duration
-        print(f"[VOICE_NODE] 🎤 Activated for {self.active_duration}s")
-
-    def _play_chime(self):
-        """Play activation sound"""
+    def _vad_listen(self):
+        """Listen with VAD to detect speech activity"""
         try:
-            import pygame
-            import numpy as np
+            # Use pyaudio directly for VAD
+            p = pyaudio.PyAudio()
+            stream = p.open(format=pyaudio.paInt16,
+                           channels=1,
+                           rate=16000,
+                           input=True,
+                           frames_per_buffer=960)  # 30ms frames at 16kHz
             
-            pygame.mixer.init(frequency=22050, size=-16, channels=1, buffer=512)
-            sample_rate = 22050
-            duration = 0.2
-            t = np.linspace(0, duration, int(sample_rate * duration))
+            frames = []
+            speech_detected = False
+            silence_frames = 0
             
-            wave = 0.3 * np.sin(2 * np.pi * 523.25 * t)  # C5
-            wave += 0.2 * np.sin(2 * np.pi * 659.25 * t)  # E5
-            wave *= np.linspace(1, 0, len(wave))
+            print("[VOICE_NODE] Listening for speech...")
             
-            sound = pygame.sndarray.make_sound((wave * 32767).astype(np.int16))
-            sound.play()
-            time.sleep(0.3)  # Let sound finish
-        except:
-            pass
+            while self.running:
+                if not self.is_active():
+                    time.sleep(0.1)
+                    continue
+                    
+                frame = stream.read(960, exception_on_overflow=False)
+                is_speech = self.vad.is_speech(frame, 16000)
+                
+                if is_speech:
+                    frames.append(frame)
+                    speech_detected = True
+                    silence_frames = 0
+                elif speech_detected:
+                    silence_frames += 1
+                    if silence_frames > self.MAX_SILENCE_FRAMES:
+                        # End of speech
+                        break
+                    frames.append(frame)
+                else:
+                    # Still waiting for speech
+                    time.sleep(0.01)
+            
+            stream.stop_stream()
+            stream.close()
+            p.terminate()
+            
+            if frames:
+                # Convert frames to audio data
+                audio_data = b''.join(frames)
+                return audio_data
+            
+        except Exception as e:
+            print(f"[VOICE_NODE] VAD listen error: {e}")
+            
+        return None
 
-    def _check_wake_word(self, text):
-        """Check if text contains wake word"""
-        if not self.use_wake_word:
-            return True
-        t = text.lower()
-        return (self.wake_word in t or 
-                "aria" in t or 
-                "hey" in t and "area" in t)
-
-    def _listen_once(self, timeout=1.0, phrase_limit=5):
-        """Listen for one utterance"""
+    def _transcribe_with_whisper(self, audio_data):
+        """Transcribe audio using Whisper"""
+        if not self.whisper_model:
+            return None
+            
         try:
-            with self.microphone as source:
-                audio = self.recognizer.listen(
-                    source, 
-                    timeout=timeout,
-                    phrase_time_limit=phrase_limit
-                )
+            # Convert bytes to numpy array
+            audio_array = np.frombuffer(audio_data, dtype=np.int16).astype(np.float32) / 32768.0
             
-            text = self.recognizer.recognize_google(audio, language='en-US')
-            return text.strip()
-        except sr.WaitTimeoutError:
+            # Transcribe
+            result = self.whisper_model.transcribe(
+                audio_array,
+                language="fr",  # French + Arabic support
+                task="transcribe",
+                fp16=False  # Use FP32 for compatibility
+            )
+            
+            text = result["text"].strip()
+            if text:
+                print(f"[VOICE_NODE] Whisper: '{text}'")
+                return text
+            
+        except Exception as e:
+            print(f"[VOICE_NODE] Whisper error: {e}")
+            
+        return None
+
+    def _process_text(self, text):
+        """Process transcribed text with name matching"""
+        if not text:
             return None
-        except sr.UnknownValueError:
-            return None
-        except sr.RequestError as e:
-            print(f"[VOICE_NODE] API error: {e}")
-            return None
+            
+        # Check if text contains a name
+        words = text.split()
+        
+        for word in words:
+            matched_name, score = self._phonetic_match(word)
+            
+            if matched_name:
+                print(f"[VOICE_NODE] Name matched: '{word}' -> '{matched_name}' (score: {score:.2f})")
+                
+                if score >= 0.85:
+                    # High confidence - accept directly
+                    print(f"[VOICE_NODE] ✓ High confidence, accepting '{matched_name}'")
+                    return matched_name
+                elif score >= 0.7:
+                    # Medium confidence - could ask for confirmation
+                    print(f"[VOICE_NODE] ⚠ Medium confidence: '{matched_name}'")
+                    # In production, would push to GUI
+                    self.command_queue.put({
+                        'type': 'NAME_CONFIRMATION_NEEDED',
+                        'name': matched_name,
+                        'original': word,
+                        'score': score
+                    })
+                    return matched_name  # Return for now, would wait for confirmation in real system
+                else:
+                    print(f"[VOICE_NODE] ✗ Low confidence: '{word}' (score: {score:.2f})")
+                    return None
+        
+        return None
+
+    def _listen_once(self):
+        """Complete listening pipeline: VAD -> Whisper -> Name matching"""
+        try:
+            # Step 1: VAD detection
+            audio_data = self._vad_listen()
+            
+            if not audio_data:
+                return None
+            
+            # Step 2: Whisper transcription
+            text = self._transcribe_with_whisper(audio_data)
+            
+            if not text:
+                return None
+            
+            # Step 3: Name matching
+            matched_name = self._process_text(text)
+            
+            return {
+                'original_text': text,
+                'matched_name': matched_name,
+                'timestamp': datetime.now().isoformat()
+            }
+            
         except Exception as e:
             print(f"[VOICE_NODE] Listen error: {e}")
             return None
 
-    def _process_command(self, text):
-        """Process recognized speech"""
-        if not text:
+    def _process(self, result):
+        """Process the final result"""
+        if not result:
             return
-
+        
         now = time.time()
         if now - self.last_spoken < self.cooldown:
             return
         self.last_spoken = now
-
-        low = text.lower().strip()
-        print(f"[VOICE_NODE] Processing: '{text}'")
-
-        # Check for wake word if not active
-        if not self.is_active:
-            if self._check_wake_word(low):
-                print(f"[VOICE_NODE] ✅ Wake word detected!")
-                self.activate()
-                self._play_chime()
-                # Don't process the wake word itself as a command
-                return
-            else:
-                # Not active and no wake word — ignore
-                return
-
-        # We're active — extend timeout
-        self.active_until = time.time() + self.active_duration
-
-        # Ignore wake word echoes
-        if low in ('hey aria', 'aria', 'hey', 'hey area', 'area'):
+        
+        # Skip wake words
+        low = result['original_text'].lower().strip()
+        if low in ('hey aria', 'aria', 'hey', 'area'):
             return
+        
+        # Format output
+        if result['matched_name']:
+            output_text = f"J'ai entendu {result['matched_name']} — C'est correct ? Sinon tapez"
+            print(f"[VOICE_NODE] → Name detection: '{result['matched_name']}'")
+            
+            # Save to database (in production)
+            self._save_to_db(result['matched_name'], result['original_text'], result['timestamp'])
+        else:
+            output_text = result['original_text']
+            print(f"[VOICE_NODE] → Text: '{output_text}'")
+        
+        # Send to GUI
+        if self.gui_node:
+            print(f"[VOICE_NODE] → GUI: '{output_text}'")
+            self.gui_node.set_message_input(output_text)
+        else:
+            print(f"[VOICE_NODE] → Direct: '{output_text}'")
+            self.command_queue.put({'type': 'USER_MESSAGE', 'text': output_text})
 
-        # Detect name
-        for trigger in ['my name is', "i'm ", 'i am ', 'call me ']:
-            if trigger in low:
-                parts = low.split(trigger, 1)
-                if len(parts) > 1:
-                    name = parts[1].strip().split()[0].capitalize()
-                    if len(name) > 1:
-                        print(f"[VOICE_NODE] Name detected: {name}")
-                        self.command_queue.put({'type': 'SET_NAME', 'name': name})
-                        return
+    def _save_to_db(self, name, original_text, timestamp):
+        """Save recognized name to database"""
+        # In production, this would save to actual database
+        print(f"[VOICE_NODE] 💾 Saving to DB: {name} (from: '{original_text}') at {timestamp}")
+        
+        # Example database save
+        # self.db.save_name_recognition(name, original_text, timestamp)
+        
+        # Update known names with new variations
+        if original_text not in self.known_names.get(name.lower(), {}).get('variations', []):
+            print(f"[VOICE_NODE] 📝 Adding new variation: '{original_text}' for {name}")
+            # In production, would save to DB and reload known names
 
-        # Regular message
-        print(f"[VOICE_NODE] → Command: '{text}'")
-        self.command_queue.put({'type': 'USER_MESSAGE', 'text': text})
-
-    def _check_timeout(self):
-        """Check if active period expired"""
-        if self.use_wake_word and self.is_active:
-            if time.time() > self.active_until:
-                self.is_active = False
-                print("[VOICE_NODE] ⏹ Deactivated (timeout)")
+    def _loop(self):
+        errors = 0
+        
+        while self.running:
+            if not self.is_active():
+                time.sleep(0.2)
+                continue
+            
+            try:
+                result = self._listen_once()
+                if result:
+                    errors = 0
+                    self._process(result)
+                else:
+                    time.sleep(0.05)
+                    
+            except Exception as e:
+                errors += 1
+                print(f"[VOICE_NODE] Error #{errors}: {e}")
+                if errors > 10:
+                    print("[VOICE_NODE] Too many errors, pausing 10s...")
+                    time.sleep(10)
+                    errors = 0
+                else:
+                    time.sleep(1)
 
     def run(self):
-        """Main loop"""
         self.running = True
         print("[VOICE_NODE] Starting...")
 
         if not self.enabled:
-            print("[VOICE_NODE] Disabled — no speech recognition")
+            print("[VOICE_NODE] Disabled (missing dependencies)")
             while self.running:
                 time.sleep(1)
             return
 
         if not self._init_mic():
-            print("[VOICE_NODE] No mic available")
+            print("[VOICE_NODE] Mic failed")
             while self.running:
                 time.sleep(1)
             return
 
-        if self.use_wake_word:
-            print(f"\n[VOICE_NODE] 🎤 Say '{self.wake_word}' to activate")
+        if self.wake_word_mode:
+            print("[VOICE_NODE] Waiting for wake word...")
         else:
-            print("[VOICE_NODE] 🎤 Listening continuously")
+            print("[VOICE_NODE] 🎤 Listening with VAD and Whisper — speak clearly!")
 
-        # Main loop
-        while self.running:
-            try:
-                self._check_timeout()
-
-                if self.use_wake_word and not self.is_active:
-                    # Short listen for wake word only
-                    text = self._listen_once(timeout=1.0, phrase_limit=3)
-                    self._process_command(text)
-                else:
-                    # Active mode — longer listen for commands
-                    text = self._listen_once(timeout=2.0, phrase_limit=8)
-                    self._process_command(text)
-
-            except Exception as e:
-                print(f"[VOICE_NODE] Error: {e}")
-                time.sleep(0.5)
+        self._loop()
 
     def shutdown(self):
         self.running = False
+        self._active = False
         print("[VOICE_NODE] Stopped")
-

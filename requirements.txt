@@ -77,3 +77,38 @@ Pillow>=10.0.0
 # python -c "import tkinter; print('✓ Tkinter OK')"
 # python -c "import cv2; print('✓ OpenCV OK')"
 # python -c "import numpy; print('✓ NumPy OK')"
+
+
+# ══════════════════════════════════════════════════════
+# FaceRecognitionNode v2.0 — Requirements
+# ══════════════════════════════════════════════════════
+
+# Core — obligatoire
+opencv-python>=4.8.0
+numpy>=1.24.0
+ultralytics>=8.0.0          # YOLOv8s + ByteTrack intégré
+
+# Reconnaissance faciale — choisir UN des deux :
+
+# Option A : InsightFace ArcFace (RECOMMANDÉ — CPU puissant)
+insightface>=0.7.3
+onnxruntime>=1.16.0         # CPU
+# onnxruntime-gpu>=1.16.0   # décommenter si GPU NVIDIA disponible
+
+# Option B : dlib via face-recognition (fallback automatique)
+face-recognition>=1.3.0
+# dlib est installé automatiquement avec face-recognition
+
+# ByteTrack (inclus dans ultralytics, mais lapx nécessaire)
+lapx>=0.5.2
+
+# ══════════════════════════════════════════════════════
+# Installation complète :
+#   pip install -r requirements.txt
+#
+# Si InsightFace échoue à télécharger buffalo_l automatiquement :
+#   mkdir -p ~/.insightface/models/
+#   # Télécharger manuellement buffalo_l.zip depuis :
+#   # https://github.com/deepinsight/insightface/releases
+#   # et décompresser dans ~/.insightface/models/buffalo_l/
+# ══════════════════════════════════════════════════════

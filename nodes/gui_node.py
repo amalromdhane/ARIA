@@ -627,12 +627,18 @@ class GUINode:
             time.sleep(random.uniform(2.5, 6))
             if not self._showing_camera:
                 self.blink_open = False
-                self.root.after(0,
-                    lambda: self._redraw(self.current_emotion))
+                try:
+                    self.root.after(0,
+                        lambda: self._redraw(self.current_emotion))
+                except RuntimeError:
+                    return
                 time.sleep(0.08)
                 self.blink_open = True
-                self.root.after(0,
-                    lambda: self._redraw(self.current_emotion))
+                try:
+                    self.root.after(0,
+                        lambda: self._redraw(self.current_emotion))
+                except RuntimeError:
+                    return
 
     def _float_loop(self):
         while self.running:

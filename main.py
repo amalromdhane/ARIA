@@ -10,6 +10,8 @@ import os
 import queue
 import threading
 import time
+import signal
+signal.signal(signal.SIGPIPE, signal.SIG_IGN)
 
 os.environ['PYTHONWARNINGS']                            = 'ignore'
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT']               = 'hide'
@@ -139,11 +141,15 @@ class ReceptionRobotSystem:
             self.face_recognition_node,
         )
 
+        self.sound_node.set_voice_node(self.voice_node)
+        self.voice_node.set_sound_node(self.sound_node)
+
         # ── Wire everything together ──────────────────────────────────
         self.state_manager.face_recognition_node  = self.face_recognition_node
         self.state_manager.ai_agent_node          = self.ai_agent_node
         self.state_manager.gui_node               = self.gui_node
         self.state_manager.emotion_detection_node = self.emotion_detection_node
+        self.state_manager.voice_node             = self.voice_node
         self.sensor_node.gui_node                 = self.gui_node
         self.ai_agent_node.gui_node               = self.gui_node
         self.ai_agent_node.state_manager          = self.state_manager
