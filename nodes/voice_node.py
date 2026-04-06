@@ -264,6 +264,11 @@ class VoiceNode:
         "got it i'll find", "say your name again", "didn't catch that",
         "please say your name", "please repeat", "having trouble hearing",
         "type it in the text box",
+        # Extra fragments caught from gTTS echo
+        "hello i don", "i don't think", "don't think we", "think we've met",
+        "we've met before", "met before", "before what", "your name",
+        "hello i", "did you know", "fun fact", "welcome back",
+        "great to see", "brain consolidates", "computer bug",
     ]
 
     def __init__(self, command_queue, face_recognition_node=None, wake_word_mode=False):
@@ -309,7 +314,7 @@ class VoiceNode:
         self._name_saved_by_gui = False
         self.NAME_CONFIRM_TIMEOUT = 10
 
-        self.cooldown_after_robot          = 4.0
+        self.cooldown_after_robot          = 6.0
         self._last_robot_response          = ""
         self._last_robot_response_time     = 0
 
@@ -466,9 +471,9 @@ class VoiceNode:
                 self._send_speak_command(
                     "I didn't catch that — please say your name again clearly.")
                 t0 = time.time()
-                while self._is_robot_speaking() and time.time() - t0 < 8.0:
+                while self._is_robot_speaking() and time.time() - t0 < 10.0:
                     time.sleep(0.1)
-                time.sleep(0.4)
+                time.sleep(1.0)
 
             print(f"[VOICE_NODE] Name attempt {attempt}/{max_attempts} "
                   f"(pause_thr={self._rec_name.pause_threshold}s)…")
@@ -677,9 +682,10 @@ class VoiceNode:
 
             if gate and not self._waiting_confirm and not self._name_saved_by_gui:
                 t0 = time.time()
-                while self._is_robot_speaking() and time.time() - t0 < 8.0:
+                while self._is_robot_speaking() and time.time() - t0 < 12.0:
                     time.sleep(0.1)
-                time.sleep(0.3)
+                # Extra buffer — gTTS playback may still be finishing
+                time.sleep(1.5)
 
                 result = self._listen_for_name(max_attempts=3)
 

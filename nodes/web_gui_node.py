@@ -233,7 +233,7 @@ HTML_TEMPLATE = '''
         .main {
             flex: 1;
             display: grid;
-            grid-template-columns: 340px 1fr;
+            grid-template-columns: 1.3fr 1fr;
             gap: 20px;
             padding: 20px 28px;
             overflow: hidden;
@@ -245,17 +245,18 @@ HTML_TEMPLATE = '''
         .face-card {
             background: var(--surface);
             border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 24px;
+            border-radius: 20px;
+            padding: 32px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            box-shadow: var(--shadow);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            transform: scale(1.03); 
             flex: 1;
         }
         
         .face-wrap {
-            width: 280px; height: 280px;
+            width: 380px; height: 380px;
             background: var(--face-bg);
             border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
@@ -316,6 +317,8 @@ HTML_TEMPLATE = '''
         .right { display: flex; flex-direction: column; gap: 16px; overflow: hidden; }
         
         .chat-card {
+            transform: scale(0.97);
+            opacity: 0.95;  
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: 16px;
@@ -475,7 +478,7 @@ HTML_TEMPLATE = '''
                 <div class="emotion-pill" id="emotion-pill">STANDBY</div>
                 
                 <div class="face-wrap" id="face-wrap">
-                    <svg class="face-svg" width="200" height="200" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg" id="face-svg">
+                    <svg class="face-svg" width="300" height="300" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg" id="face-svg">
                         <!-- Head -->
                         <circle cx="70" cy="70" r="56" fill="#EBF0FC" stroke="#1A56DB" stroke-width="2.5" id="head-circle"/>
                         <!-- Ears -->

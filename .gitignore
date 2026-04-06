@@ -1,0 +1,66 @@
+# ============================================
+# ARIA Reception Robot — .gitignore
+# ============================================
+
+# ── Base de données visiteurs (données personnelles) ──
+visitor_database.pkl
+*.pkl
+
+# ── Modèles YOLO téléchargés ──
+*.pt
+*.onnx
+
+# ── Logs ──
+logs/
+*.log
+robot.log
+
+# ── Python cache ──
+__pycache__/
+*.cpython-*.pyc
+*.pyc
+*.pyo
+*.pyd
+*.so
+
+# ── Environnements virtuels ──
+venv/
+env/
+.env
+*.env
+
+# ── Clés API et configs sensibles ──
+config/mistral_key.txt
+config/.env
+.env
+*.key
+*.secret
+
+# ── InsightFace models (trop lourds, ~500MB) ──
+# Téléchargés automatiquement au premier lancement
+# ~/.insightface/ est hors du repo de toute façon
+
+# ── Backups auto-générés ──
+backups/
+*.bak
+
+# ── Fichiers temporaires ──
+*.tmp
+*.temp
+tmp/
+temp/
+
+# ── IDE ──
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── OS ──
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Core dumps ──
+core
+*.core

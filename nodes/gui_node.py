@@ -13,19 +13,12 @@ import time
 import math
 import queue
 
-try:
-    from PIL import Image, ImageTk
-    PIL_AVAILABLE = True
-except ImportError:
-    PIL_AVAILABLE = False
-    print("[GUI] pip install Pillow")
+from PIL import Image, ImageTk
+PIL_AVAILABLE = True
 
-try:
-    import cv2
-    import numpy as np
-    CV2_AVAILABLE = True
-except ImportError:
-    CV2_AVAILABLE = False
+import cv2
+import numpy as np
+CV2_AVAILABLE = True
 
 
 class GUINode:
@@ -303,7 +296,7 @@ class GUINode:
                     last_t   = self._last_frame_t
 
                 # If no frame for > 3 seconds → show animated face
-                if frame is None or time.time() - last_t > 3.0:
+                if frame is None:
                     if self._showing_camera:
                         self._showing_camera = False
                         self.root.after(0,
@@ -431,9 +424,8 @@ class GUINode:
 
     def clear_detected_faces(self):
         with self._camera_lock:
-            self._face_overlays  = []
-            self._current_frame  = None
-        self.root.after(0, lambda: self._redraw(self.current_emotion))
+            self._face_overlays = []
+        # Don't clear _current_frame — camera stays live
 
     # ── Animated face (shown when no camera feed) ─────────────────────
 
